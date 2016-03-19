@@ -27,10 +27,9 @@ int pow(struct node *ele){
 
 }
 int convert_sll_2digit_to_int(struct node *head){
-	return 0;
 	struct node *current = head;
 	int number = 0;
-	if (head == NULL)return 0;
+	if (head == NULL)return  NULL;
 	while (current != NULL){
 		number = (number + pow(current)) * 100;
 		current = current->next;
