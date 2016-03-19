@@ -21,6 +21,22 @@ struct node {
 	struct node *next;
 };
 
+int pow(struct node *ele){
+	int temp = (ele->digit1) * 10 + ele->digit2;
+	return temp;
+
+}
 int convert_sll_2digit_to_int(struct node *head){
 	return 0;
+	struct node *current = head;
+	int number = 0;
+	if (head == NULL)return 0;
+	while (current != NULL){
+		number = (number + pow(current)) * 100;
+		current = current->next;
+
+	}
+	number = number / 100;
+	free(current);
+	return number;
 }
